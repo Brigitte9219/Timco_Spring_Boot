@@ -48,4 +48,9 @@ public class PqrsfImpl implements IPqrsf {
         }
     }
 
+    @Override
+    public void borrarPqrsf(Integer idpqrsf) {
+        pqrsfRepository.deleteById(idpqrsf);
+    }
+
 }

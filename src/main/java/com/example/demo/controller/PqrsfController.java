@@ -35,4 +35,9 @@ public class PqrsfController {
     public Pqrsf actualizarPqrsf(@PathVariable Integer id, @RequestBody Pqrsf nuevoPqrsf) {
         return pqrsfservice.actualizarPqrsf(id, nuevoPqrsf);
     }
+
+    @DeleteMapping(path = "{id}")
+    public void eliminar(@PathVariable("id") Integer idpqrsf) {
+        pqrsfservice.borrarPqrsf(idpqrsf);
+    }
 }

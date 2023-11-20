@@ -12,4 +12,6 @@ public interface IPqrsf {
     ArrayList<Pqrsf> getAllPqrsf();
 
     Pqrsf actualizarPqrsf(Integer id, Pqrsf nuevoPqrsf);
+
+    void borrarPqrsf(Integer idpqrsf);
 }
