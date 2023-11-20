@@ -1,10 +1,13 @@
 package com.example.demo.service.impl;
 
 import com.example.demo.model.Contacto;
+import com.example.demo.model.Trabajador;
 import com.example.demo.repository.ContactoRepository;
 import com.example.demo.service.IContactoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 
 
 @Service
@@ -13,6 +16,12 @@ public class ContactoServiceImpl implements IContactoService {
     @Autowired
     ContactoRepository contactoRepository;
 
+    @Override
+    public ArrayList<Contacto> getAllContacto() {
+
+        ArrayList<Contacto> contactos = (ArrayList<Contacto>) contactoRepository.findAll();
+        return contactos;
+    }
 
     @Override
     public Contacto guardarContacto(Contacto contacto) {
