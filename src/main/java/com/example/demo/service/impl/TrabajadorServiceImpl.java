@@ -74,4 +74,9 @@ public class TrabajadorServiceImpl implements ITrabajadorService {
             return null;
         }
     }
+
+    @Override
+    public void borrarTrabajador(Integer idtrabajador) {
+        trabajadorRepository.deleteById(idtrabajador);
+    }
 }

@@ -13,4 +13,6 @@ public interface ITrabajadorService {
     ArrayList<Trabajador> getAllTrabajadores();
 
     Trabajador actualizarTrabajador(Integer id, Trabajador nuevoTrabajador);
+
+    void borrarTrabajador(Integer idtrabajador);
 }

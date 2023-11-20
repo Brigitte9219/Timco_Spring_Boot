@@ -35,4 +35,9 @@ public class TrabajadorController {
         return trabajadorService.actualizarTrabajador(id, nuevoTrabajador);
     }
 
+    @DeleteMapping(path = "{id}")
+    public void eliminar(@PathVariable("id") Integer idtrabajador) {
+        trabajadorService.borrarTrabajador(idtrabajador);
+    }
+
 }
