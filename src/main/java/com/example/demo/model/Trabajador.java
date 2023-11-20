@@ -58,4 +58,7 @@ public class Trabajador {
     @Column(name = "Estado_Civil")
     private String estadoCivil;
 
+    @Column(name="RH")
+    private String rh;
+
 }
