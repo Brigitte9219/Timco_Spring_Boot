@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 
+import com.example.demo.model.Contacto;
 import com.example.demo.model.Trabajador;
 import com.example.demo.service.ITrabajadorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,11 @@ public class TrabajadorController {
     public Iterable<Trabajador> obtenerTrabajadores(){
         ArrayList<Trabajador> trabajadores =  trabajadorService.getAllTrabajadores();
         return trabajadores;
+    }
 
+    @PutMapping("/{id}")
+    public Trabajador actualizarTrabajador(@PathVariable Integer id, @RequestBody Trabajador nuevoTrabajador) {
+        return trabajadorService.actualizarTrabajador(id, nuevoTrabajador);
     }
 
 }
