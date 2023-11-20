@@ -10,4 +10,6 @@ public interface IProductoService {
 
     ArrayList<Producto> getAllProductos();
 
+    Producto actualizarProducto(Integer id, Producto nuevoProducto);
+
 }

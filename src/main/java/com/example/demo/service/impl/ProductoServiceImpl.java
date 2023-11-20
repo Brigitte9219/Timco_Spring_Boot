@@ -26,6 +26,29 @@ public class ProductoServiceImpl implements IProductoService {
         return productos;
     }
 
+    @Override
+    public Producto actualizarProducto(Integer id, Producto nuevoProducto) {
+        Producto productoExistente = productoRepository.findById(id).orElse(null);
+
+        if (productoExistente != null) {
+
+            productoExistente.setNombre(nuevoProducto.getNombre());
+            productoExistente.setCodigoInterno(nuevoProducto.getCodigoInterno());
+            productoExistente.setMarca(nuevoProducto.getMarca());
+            productoExistente.setSerie(nuevoProducto.getSerie());
+            productoExistente.setFechaFabricacion(nuevoProducto.getFechaFabricacion());
+            productoExistente.setReferencia(nuevoProducto.getReferencia());
+            productoExistente.setLote(nuevoProducto.getLote());
+            productoExistente.setNormaTecnica(nuevoProducto.getNormaTecnica());
+            productoExistente.setCantidad(nuevoProducto.getCantidad());
+            productoExistente.setProveedor(nuevoProducto.getProveedor());
+
+            return productoRepository.save(productoExistente);
+        } else {
+
+            return null;
+        }
+    }
 
 
 }

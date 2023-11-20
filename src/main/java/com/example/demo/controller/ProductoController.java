@@ -28,4 +28,9 @@ public class ProductoController {
         ArrayList<Producto> productos =  productoService.getAllProductos();
         return productos;
     }
+
+    @PutMapping("/{id}")
+    public Producto actualizarProducto(@PathVariable Integer id, @RequestBody Producto nuevoProducto) {
+        return productoService.actualizarProducto(id, nuevoProducto);
+    }
 }
