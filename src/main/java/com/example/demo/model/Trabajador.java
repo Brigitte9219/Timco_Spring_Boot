@@ -61,4 +61,51 @@ public class Trabajador {
     @Column(name="RH")
     private String rh;
 
+    @Column(name="Grupo_Sanguineo")
+    private String grupoSanguineo;
+
+    @Column(name="Localidad")
+    private String localidad;
+
+    @Column(name="Ciudad_Residencia")
+    private String ciudadResidencia;
+
+    @Column(name="Barrio")
+    private String barrio;
+
+    @Column(name="Direccion")
+    private String direccion;
+
+    @Column(name="Telefono_Movil")
+    private String telefonoMovil;
+
+    @Column(name="Telefono_Fijo")
+    private String telefonoFijo;
+
+    @Column(name="EPS")
+    private String eps;
+
+    @Column(name="AFP")
+    private String afp;
+
+    @Column(name="Escolaridad")
+    private String escolaridad;
+
+    @Column(name="Profesion")
+    private String profesion;
+
+    @Column(name="Talla_Camisa")
+    private String tallaCamisa;
+
+    @Column(name="Talla_Pantalon")
+    private String tallaPantalon;
+
+    @Column(name="Talla_Chaqueta")
+    private String tallaChaqueta;
+
+    @Column(name="Talla_Calzado")
+    private String tallaCalzado;
+
+
+
 }
