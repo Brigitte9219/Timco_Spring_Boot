@@ -30,4 +30,9 @@ public class PqrsfController {
         ArrayList<Pqrsf> pqrsfs =  pqrsfservice.getAllPqrsf();
         return pqrsfs;
     }
+
+    @PutMapping("/{id}")
+    public Pqrsf actualizarPqrsf(@PathVariable Integer id, @RequestBody Pqrsf nuevoPqrsf) {
+        return pqrsfservice.actualizarPqrsf(id, nuevoPqrsf);
+    }
 }

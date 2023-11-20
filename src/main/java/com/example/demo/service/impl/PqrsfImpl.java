@@ -1,5 +1,6 @@
 package com.example.demo.service.impl;
 
+import com.example.demo.model.Contacto;
 import com.example.demo.model.Pqrsf;
 import com.example.demo.repository.PqrsfRepository;
 import com.example.demo.service.IPqrsf;
@@ -24,4 +25,27 @@ public class PqrsfImpl implements IPqrsf {
     public Pqrsf guardarPqrsf(Pqrsf pqrsf) {
         return pqrsfRepository.save(pqrsf);
     }
+
+    @Override
+    public Pqrsf actualizarPqrsf(Integer id, Pqrsf nuevoPqrsf) {
+        Pqrsf pqrsfExistente = pqrsfRepository.findById(id).orElse(null);
+
+        if (pqrsfExistente != null) {
+
+            pqrsfExistente.setNombre(nuevoPqrsf.getNombre());
+            pqrsfExistente.setEmpresa(nuevoPqrsf.getEmpresa());
+            pqrsfExistente.setCargo(nuevoPqrsf.getCargo());
+            pqrsfExistente.setCiudad(nuevoPqrsf.getCiudad());
+            pqrsfExistente.setCelular(nuevoPqrsf.getCelular());
+            pqrsfExistente.setCorreo(nuevoPqrsf.getCorreo());
+            pqrsfExistente.setTramite(nuevoPqrsf.getTramite());
+            pqrsfExistente.setMensaje(nuevoPqrsf.getMensaje());
+
+            return pqrsfRepository.save(pqrsfExistente);
+        } else {
+
+            return null;
+        }
+    }
+
 }
