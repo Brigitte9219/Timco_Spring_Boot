@@ -50,5 +50,14 @@ public class ProductoServiceImpl implements IProductoService {
         }
     }
 
+    @Override
+    public void borrarProducto(Integer idproducto) {
+        productoRepository.deleteById(idproducto);
+    }
+
+
 
 }
+
+
+

@@ -12,4 +12,5 @@ public interface IProductoService {
 
     Producto actualizarProducto(Integer id, Producto nuevoProducto);
 
+    void borrarProducto(Integer idproducto);
 }
