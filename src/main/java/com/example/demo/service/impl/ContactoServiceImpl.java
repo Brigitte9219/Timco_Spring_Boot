@@ -16,9 +16,7 @@ public class ContactoServiceImpl implements IContactoService {
 
     @Override
     public Contacto guardarContacto(Contacto contacto) {
-
         return contactoRepository.save(contacto);
-
     }
 
     @Override
@@ -36,8 +34,6 @@ public class ContactoServiceImpl implements IContactoService {
             contactoExistente.setCorreo(nuevoContacto.getCorreo());
             contactoExistente.setAsunto(nuevoContacto.getAsunto());
             contactoExistente.setNombre(nuevoContacto.getNombre());
-
-
 
             return contactoRepository.save(contactoExistente);
         } else {
