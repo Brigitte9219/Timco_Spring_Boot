@@ -8,4 +8,8 @@ public interface IAsignacionService {
 
     Asignacion guardarAsignacion (Asignacion asignacion);
     ArrayList<Asignacion> getAllAsignacion();
+
+    Asignacion actualizarAsignacion(Integer id, Asignacion nuevoAsignacion);
+
+    void borrarAsignacion(Integer idasignacion);
 }

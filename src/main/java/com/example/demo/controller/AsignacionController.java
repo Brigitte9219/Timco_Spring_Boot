@@ -29,4 +29,13 @@ public class AsignacionController {
         ArrayList<Asignacion> asignacions =  asignacionService.getAllAsignacion();
         return asignacions;
     }
+
+    @PutMapping("/{id}")
+    public Asignacion actualizarAsignacion(@PathVariable Integer id, @RequestBody Asignacion nuevoAsignacion) {
+        return asignacionService.actualizarAsignacion(id, nuevoAsignacion);
+    }
+
+    @DeleteMapping(path = "{id}")
+    public void eliminar(@PathVariable("id") Integer idasignacion) {asignacionService.borrarAsignacion(idasignacion);
+    }
 }
