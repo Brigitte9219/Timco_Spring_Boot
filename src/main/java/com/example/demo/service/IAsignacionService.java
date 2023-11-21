@@ -6,5 +6,6 @@ import java.util.ArrayList;
 
 public interface IAsignacionService {
 
+    Asignacion guardarAsignacion (Asignacion asignacion);
     ArrayList<Asignacion> getAllAsignacion();
 }

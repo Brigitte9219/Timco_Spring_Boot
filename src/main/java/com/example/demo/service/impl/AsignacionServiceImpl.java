@@ -16,6 +16,11 @@ public class AsignacionServiceImpl implements IAsignacionService {
     private AsignacionRepository asignacionRepository;
 
     @Override
+    public Asignacion guardarAsignacion (Asignacion asignacion){
+        return asignacionRepository.save(asignacion);
+    }
+
+    @Override
     public ArrayList<Asignacion> getAllAsignacion() {
         ArrayList<Asignacion> asignacions = (ArrayList<Asignacion>) asignacionRepository.findAll();
         return asignacions;

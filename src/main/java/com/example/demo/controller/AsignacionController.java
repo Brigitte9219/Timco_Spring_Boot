@@ -5,9 +5,9 @@ import com.example.demo.model.Producto;
 import com.example.demo.service.IAsignacionService;
 import com.example.demo.service.IProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -17,6 +17,12 @@ public class AsignacionController {
 
     @Autowired
     private IAsignacionService asignacionService;
+
+    @PostMapping
+    public ResponseEntity<Asignacion> guardarAsignacion(@RequestBody Asignacion asignacion){
+        Asignacion nuevoasignacion = asignacionService.guardarAsignacion(asignacion);
+        return new ResponseEntity<>(nuevoasignacion, HttpStatus.CREATED);
+    }
 
     @GetMapping
     public Iterable<Asignacion> obtenerAsignacion(){
