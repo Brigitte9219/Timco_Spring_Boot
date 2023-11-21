@@ -35,4 +35,8 @@ public class SolicitudController {
         return solicitudService.actualizarSolicitud(id, nuevoSolicitud);
     }
 
+    @DeleteMapping(path = "{id}")
+    public void eliminar(@PathVariable("id") Integer idsolicitud) {solicitudService.borrarSolicitud(idsolicitud);
+    }
+
 }

@@ -50,4 +50,9 @@ public class SolicitudServiceImpl implements ISolicitudService {
         }
     }
 
+    @Override
+    public void borrarSolicitud(Integer idsolicitud) {
+        solicitudRepository.deleteById(idsolicitud);
+    }
+
 }

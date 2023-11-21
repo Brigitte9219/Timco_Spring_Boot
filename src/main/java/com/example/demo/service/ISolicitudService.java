@@ -11,4 +11,7 @@ public interface ISolicitudService {
     ArrayList<Solicitud> getAllSolicitudes();
 
     Solicitud actualizarSolicitud(Integer id, Solicitud nuevoSolicitud);
+
+    void borrarSolicitud(Integer idsolicitud);
+
 }
