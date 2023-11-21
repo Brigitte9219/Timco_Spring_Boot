@@ -23,6 +23,9 @@ public class Solicitud {
     @Column(name = "Nombre_Trabajador")
     private String nombreTrabajador;
 
+    @Column(name = "Nombre_Producto")
+    private String nombreProducto;
+
     @Column(name = "Cantidad")
     private Integer cantidad;
 

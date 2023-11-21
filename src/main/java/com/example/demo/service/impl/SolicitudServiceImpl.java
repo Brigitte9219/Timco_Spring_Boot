@@ -28,4 +28,26 @@ public class SolicitudServiceImpl implements ISolicitudService {
         return solicituds;
     }
 
+    @Override
+    public Solicitud actualizarSolicitud(Integer id, Solicitud nuevoSolicitud) {
+        Solicitud solicitudExistente = solicitudRepository.findById(id).orElse(null);
+
+        if (solicitudExistente != null) {
+
+            solicitudExistente.setFechaSolicitud(nuevoSolicitud.getFechaSolicitud());
+            solicitudExistente.setNombreTrabajador(nuevoSolicitud.getNombreTrabajador());
+            solicitudExistente.setNombreProducto(nuevoSolicitud.getNombreProducto());
+            solicitudExistente.setCantidad(nuevoSolicitud.getCantidad());
+            solicitudExistente.setTalla(nuevoSolicitud.getTalla());
+            solicitudExistente.setProyecto(nuevoSolicitud.getProyecto());
+            solicitudExistente.setArea(nuevoSolicitud.getArea());
+            solicitudExistente.setObservaciones(nuevoSolicitud.getObservaciones());
+
+            return solicitudRepository.save(solicitudExistente);
+        } else {
+
+            return null;
+        }
+    }
+
 }

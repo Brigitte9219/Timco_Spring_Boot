@@ -9,4 +9,6 @@ public interface ISolicitudService {
     Solicitud guardarSolicitud (Solicitud solicitud);
 
     ArrayList<Solicitud> getAllSolicitudes();
+
+    Solicitud actualizarSolicitud(Integer id, Solicitud nuevoSolicitud);
 }

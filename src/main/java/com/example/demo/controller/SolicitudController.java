@@ -30,4 +30,9 @@ public class SolicitudController {
         return solicituds;
     }
 
+    @PutMapping("/{id}")
+    public Solicitud actualizarSolicitud(@PathVariable Integer id, @RequestBody Solicitud nuevoSolicitud) {
+        return solicitudService.actualizarSolicitud(id, nuevoSolicitud);
+    }
+
 }
