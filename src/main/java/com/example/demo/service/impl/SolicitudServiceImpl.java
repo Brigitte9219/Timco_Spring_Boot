@@ -16,11 +16,11 @@ public class SolicitudServiceImpl implements ISolicitudService {
     @Autowired
     private SolicitudRepository solicitudRepository;
 
-/*
+
     @Override
     public Solicitud guardarSolicitud (Solicitud solicitud){
         return solicitudRepository.save(solicitud);
-    }*/
+    }
 
     @Override
     public ArrayList<Solicitud> getAllSolicitudes() {

@@ -17,12 +17,12 @@ public class SolicitudController {
     @Autowired
     private ISolicitudService solicitudService;
 
-/*
+
     @PostMapping
     public ResponseEntity<Solicitud> guardarSolicitud(@RequestBody Solicitud solicitud){
         Solicitud nuevosolicitud = solicitudService.guardarSolicitud(solicitud);
         return new ResponseEntity<>(nuevosolicitud, HttpStatus.CREATED);
-    }*/
+    }
 
     @GetMapping
     public Iterable<Solicitud> obtenerSolicitudes(){

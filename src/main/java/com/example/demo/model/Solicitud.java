@@ -29,9 +29,6 @@ public class Solicitud {
     @Column(name = "Talla")
     private String talla;
 
-    @Column(name = "Actividad_aRealizar")
-    private String actividadARealizar;
-
     @Column(name = "Proyecto")
     private String proyecto;
 

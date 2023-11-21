@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public interface ISolicitudService {
 
-    //Solicitud guardarSolicitud (Solicitud solicitud);
+    Solicitud guardarSolicitud (Solicitud solicitud);
 
     ArrayList<Solicitud> getAllSolicitudes();
 }
