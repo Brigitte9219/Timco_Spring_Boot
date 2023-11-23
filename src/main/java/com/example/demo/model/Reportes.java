@@ -16,23 +16,23 @@ public class Reportes {
     private Integer idReportes;
 
     @Column(name = "Nombre_Trabajador")
-    private Integer nombreTrabajador;
+    private String nombreTrabajador;
 
     @Column(name = "Numero_ID")
     private Integer numeroId;
 
     @Column(name = "Nombre_Producto")
-    private Integer nombreProducto;
+    private String nombreProducto;
 
     @Column(name = "Fecha_Inicio")
-    private Integer fechaInicio;
+    private String fechaInicio;
 
     @Column(name = "Fecha_Final")
-    private Integer fechaFinal;
+    private String fechaFinal;
 
     @Column(name = "Proyecto")
-    private Integer proyecto;
+    private String proyecto;
 
     @Column(name = "Area")
-    private Integer area;
+    private String area;
 }
