@@ -17,7 +17,7 @@ public class TrabajadorController {
 
     @Autowired
     private ITrabajadorService trabajadorService;
-
+    
     @PostMapping
     public ResponseEntity<Trabajador> guardarTrabajador(@RequestBody Trabajador trabajador){
         Trabajador nuevoTrabajador = trabajadorService.guardarTrabajador(trabajador);

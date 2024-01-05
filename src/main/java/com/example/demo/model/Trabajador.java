@@ -1,22 +1,21 @@
 package com.example.demo.model;
 
+import java.io.Serializable;
 
-import lombok.Getter;
-import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import lombok.Data;
 
 
 @Entity
 @Table(name = "trabajador")
-@Getter
-@Setter
-public class Trabajador {
+@Data
+public class Trabajador implements Serializable {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//Id autoincrementable
     @Column(name = "idtrabajador")
     private Integer idTrabajador;
 
@@ -106,6 +105,16 @@ public class Trabajador {
     @Column(name="Talla_Calzado")
     private String tallaCalzado;
 
-
+    @Column(name="Emergencia_NombreCompleto")
+    private String nombreEmergencia;
+    
+    @Column(name="Emergencia_Parentesco")
+    private String parentescoEmergencia;
+    
+    @Column(name="Emergencia_TelefonoMovil")
+    private String movilEmergencia;
+    
+    @Column(name="Emergencia_TelefonoFijo")
+    private String fijoEmergencia;
 
 }

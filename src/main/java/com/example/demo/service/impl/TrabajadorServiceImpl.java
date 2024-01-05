@@ -16,7 +16,7 @@ import java.util.List;
 public class TrabajadorServiceImpl implements ITrabajadorService {
 
     @Autowired
-    private TrabajadorRepository trabajadorRepository;
+    private TrabajadorRepository trabajadorRepository;///usamos los metodos que estan  en crud repository
 
 
     @Override
