@@ -30,7 +30,7 @@ public class Producto {
     private String serie;
 
     @Column (name = "Fecha_Fabricacion")
-    private Date fechaFabricacion;
+    private String fechaFabricacion;
 
     @Column (name = "Referencia")
     private String referencia;
