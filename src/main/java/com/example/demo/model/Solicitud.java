@@ -31,6 +31,9 @@ public class Solicitud {
 
     @Column(name = "Talla")
     private String talla;
+    
+    @Column(name = "Actividad_aRealizar")
+    private String actividad;
 
     @Column(name = "Proyecto")
     private String proyecto;
